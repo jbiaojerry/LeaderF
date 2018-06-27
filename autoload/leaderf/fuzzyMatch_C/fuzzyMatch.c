@@ -557,7 +557,7 @@ ValueElements* evaluate(TextContext* pText_ctxt,
                         score = prefix_score + pVal->score;
                         end_pos = pVal->end;
                         if ( k == 0 )
-                            score -= 0.4f * (end_pos - i + n - pattern_len);
+                            score -= 0.3f * (end_pos - i + n - pattern_len);
                     }
                 }
             }
@@ -1249,7 +1249,7 @@ HighlightGroup* evaluateHighlights(TextContext* pText_ctxt,
                             score = prefix_score + pGroup->score;
                             if ( k == 0 )
                             {
-                                score -= 0.4f * (pGroup->end - i + n - pattern_len);
+                                score -= 0.3f * (pGroup->end - i + n - pattern_len);
                             }
                             cur_highlights.score = score;
                             cur_highlights.beg = i - n;
